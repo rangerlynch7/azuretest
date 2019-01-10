@@ -1,0 +1,35 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "adminUsername": {
+        "value": "serveradmin"
+      },
+      "adminPassword": {
+        "reference": {
+            "keyVault": {
+                "id": "/subscriptions/686aa72d-4cbd-4651-a3ef-c712895aa458/resourceGroups/tesrarm_rg/providers/Microsoft.KeyVault/vaults/testarmkeyvaultarch"
+            },
+            "secretName": "adminpassword"
+        }
+      },
+      
+      "vmssName": {
+        "value": "testarmvmss"
+      },
+      "instanceCount": {
+        "value": 2
+      },
+      "existingVnetResourceGroupName": {
+        "value": "tesrarm_rg"
+      },
+      "existingVnetName": {
+        "value": "testarmvnet"
+      },
+      "existingSubnetName": {
+        "value": "GET-PREREQ-existingSubnetName"
+      }
+    }
+  }
+
+
