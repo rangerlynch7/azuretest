@@ -27,7 +27,7 @@
         "value": "testarmvnet"
       },
       "existingSubnetName": {
-        "value": "GET-PREREQ-existingSubnetName"
+        "value": "ggsubnet"
       }
     }
   }
